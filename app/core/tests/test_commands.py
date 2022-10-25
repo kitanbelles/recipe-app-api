@@ -12,6 +12,6 @@ from django.test import SimpleTestCase
 
 class CommandTest (SimpleTestCase):
     """test commands."""
-    
+
     def test_waitfor_db_ready(self):
         """Test waiting for database if database is ready"""
