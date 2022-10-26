@@ -10,7 +10,8 @@ from django.core.management import call_command
 from django.db.utils import OperationalError
 from django.test import SimpleTestCase
 
-class CommandTest (SimpleTestCase):
+
+class CommandTest(SimpleTestCase):
     """test commands."""
 
     def test_waitfor_db_ready(self):
