@@ -2,7 +2,7 @@
 test custom django management command
 """
 
-from asyncio import wait_for
+from asyncio import wait_for  # noqa
 from unittest.mock import patch
 
 from psycopg2 import OperationalError as Pyscopg2Error
