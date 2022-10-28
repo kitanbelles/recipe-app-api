@@ -1,7 +1,7 @@
 """
 database models
 """
-from email.policy import default
+from email.policy import default  # noqa
 from django.db import models
 from django.contrib.auth.models import (
     AbstractBaseUser,
