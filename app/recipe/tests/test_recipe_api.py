@@ -2,7 +2,6 @@
 Tests for recipe APIs
 """
 from decimal import Decimal
-from email.policy import default
 
 from django.contrib.auth import get_user_model
 from django.test import TestCase
