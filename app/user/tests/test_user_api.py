@@ -62,7 +62,8 @@ class PublicUserApiTests(TestCase):
 
         self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
         user_exists = get_user_model().objects.filter(
-            email=payload["email"]).exists()
+            email=payload["email"]
+            ).exists()
         self.assertFalse(user_exists)
 
     def test_create_token_for_user(self):
@@ -92,7 +93,6 @@ class PublicUserApiTests(TestCase):
 
         self.assertNotIn("token", res.data)
         self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
-
 
     def test_create_token_email_not_found(self):
         """Test error returned if user not found for given email."""
@@ -134,13 +134,10 @@ class PrivateuserAPiTests(TestCase):
         res = self.client.get(ME_URL)
 
         self.assertEqual(res.status_code, status.HTTP_200_OK)
-        self.assertEqual(
-            res.data,
-            {
+        self.assertEqual(res.data, {
                 "name": self.user.name,
                 "email": self.user.email,
-            },
-        )
+            })
 
     def test_post_me_not_allowed(self):
         """Test POST is not allowed for the me endpoint."""
