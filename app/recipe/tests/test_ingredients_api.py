@@ -1,5 +1,5 @@
 """
-Tests for the åås API.
+Tests for the ingredients API.
 """
 
 from django.contrib.auth import get_user_model
